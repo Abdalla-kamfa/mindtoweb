@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-background: #0B0E14;
+  --color-foreground: #F8FAFC;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-primary: #8B5CF6;
+  --color-primary-foreground: #F8FAFC;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-secondary: #3B82F6;
+  --color-secondary-foreground: #F8FAFC;
+
+  --color-accent: #D946EF;
+  --color-accent-foreground: #F8FAFC;
+
+  --color-muted: #94A3B8;
+  --color-muted-foreground: #F8FAFC;
+
+  --color-card: rgba(255, 255, 255, 0.05);
+  --color-card-foreground: #F8FAFC;
+
+  --image-hero-glow: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, rgba(11, 14, 20, 0) 70%);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-gradient: gradient 8s ease infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
 
+/* Base Styles */
+:root {
+  --background: #0B0E14;
+  --foreground: #F8FAFC;
+}
+
 body {
-  background: var(--background);
   color: var(--foreground);
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Utilities */
+@utility glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl;
+}
+
+@utility glass-hover {
+  @apply hover:bg-white/10 transition-all duration-300;
+}
+
+@utility text-glow {
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+@utility box-glow {
+  box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0E14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
 }
