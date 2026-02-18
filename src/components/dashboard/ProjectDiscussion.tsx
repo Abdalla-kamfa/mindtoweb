@@ -187,7 +187,7 @@ export function ProjectDiscussion({ projectId, currentUserId }: ProjectDiscussio
                     placeholder="Type your message..."
                     className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary/50 transition-colors"
                 />
-                <Button type="submit" disabled={isSending || !newComment.trim()} size="icon">
+                <Button type="submit" disabled={isSending || !newComment.trim()} size="sm" className="w-10 h-10 p-0 rounded-lg">
                     {isSending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
                 </Button>
             </form>
