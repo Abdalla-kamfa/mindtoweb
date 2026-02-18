@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input"; // We might need to create this or use standard input
+
 import {
     Search,
     Filter,
