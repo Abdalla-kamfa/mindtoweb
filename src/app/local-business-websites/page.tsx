@@ -113,8 +113,8 @@ export default function LocalBusinessLandingPage() {
 
                             <div className="grid grid-cols-1 gap-4">
                                 {[
-                                    { icon: MessageCircle, text: "WhatsApp Chat Integration" },
                                     { icon: MapPin, text: "Google Maps & SEO Location" },
+                                    { icon: MessageCircle, text: "WhatsApp Chat Integration" },
                                     { icon: Smartphone, text: "100% Mobile Optimized" },
                                     { icon: Zap, text: "Lightning Fast Loading" },
                                     { icon: Search, text: "Google Search Ready (SEO)" },
