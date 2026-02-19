@@ -1,7 +1,7 @@
 "use client";
 
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -287,7 +287,7 @@ export default function LocalBusinessLandingPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }
