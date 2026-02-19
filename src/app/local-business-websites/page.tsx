@@ -17,7 +17,11 @@ import {
     MessageCircle,
     CheckCircle2,
     ArrowRight,
-    Star
+    CheckCircle2,
+    ArrowRight,
+    Star,
+    ExternalLink,
+    LayoutTemplate
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -247,24 +251,83 @@ export default function LocalBusinessLandingPage() {
             <section id="demo" className="py-20 bg-white/5 border-t border-white/5">
                 <div className="container mx-auto px-6 text-center">
                     <ScrollReveal>
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="text-3xl font-bold mb-8">See What's Possible</h2>
-                            <GlassCard className="p-2 bg-[#0B0E14]/40 backdrop-blur-sm border-white/10 rounded-xl overflow-hidden group cursor-pointer relative">
-                                <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden relative">
-                                    {/* Placeholder for Demo Image - using a gradient/abstract for now */}
-                                    {/* In a real scenario, this would be a screenshot or iframe */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
-                                        <span className="text-gray-600 font-mono">Live Demo Preview</span>
-                                    </div>
+                        <div className="max-w-5xl mx-auto">
+                            <h2 className="text-3xl font-bold mb-4">See What's Possible</h2>
+                            <p className="text-gray-400 mb-10 max-w-2xl mx-auto">
+                                Experience a fully functional website built for growth. Fast, beautiful, and ready to convert customers.
+                            </p>
 
-                                    {/* Overlay Button */}
-                                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
-                                        <Button size="lg" className="shadow-xl">
-                                            Explore Live Demo <ArrowRight className="ml-2 w-4 h-4" />
-                                        </Button>
+                            {/* BROWSER WINDOW MOCK */}
+                            <div className="rounded-xl overflow-hidden border border-white/10 bg-[#0B0E14] shadow-2xl relative mb-8 group">
+                                {/* Browser Header */}
+                                <div className="h-10 bg-white/5 border-b border-white/5 flex items-center px-4 gap-2">
+                                    <div className="flex gap-1.5">
+                                        <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                                        <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                                        <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                                    </div>
+                                    <div className="flex-1 flex justify-center">
+                                        <div className="h-6 w-full max-w-sm bg-black/40 rounded-md flex items-center justify-center text-[10px] text-gray-500 font-mono">
+                                            mindtoweb.com/demo/restaurant
+                                        </div>
                                     </div>
                                 </div>
-                            </GlassCard>
+
+                                {/* Browser Content (Mini Website Preview) */}
+                                <div className="aspect-video bg-[#0f1115] relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-500">
+                                    {/* Mini Navbar */}
+                                    <div className="absolute top-0 left-0 right-0 h-12 border-b border-white/5 flex items-center justify-between px-6 z-10 bg-[#0f1115]/80 backdrop-blur-md">
+                                        <div className="w-20 h-4 bg-white/10 rounded-full" />
+                                        <div className="flex gap-4">
+                                            <div className="w-12 h-3 bg-white/5 rounded-full" />
+                                            <div className="w-12 h-3 bg-white/5 rounded-full" />
+                                            <div className="w-20 h-6 bg-primary/20 rounded-full" />
+                                        </div>
+                                    </div>
+
+                                    {/* Mini Hero Content */}
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="text-center space-y-4 p-4">
+                                            <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-2 border border-primary/20">
+                                                New Collection 2026
+                                            </div>
+                                            <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+                                                Taste the <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Difference</span>
+                                            </h3>
+                                            <p className="text-gray-400 text-sm max-w-md mx-auto">
+                                                Authentic flavors delivered to your doorstep. Experience culinary excellence with every bite.
+                                            </p>
+                                            <div className="flex justify-center gap-2 pt-2">
+                                                <div className="h-8 w-24 bg-primary rounded-md shadow-lg shadow-primary/20" />
+                                                <div className="h-8 w-24 bg-white/10 rounded-md" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Decorative Elements */}
+                                    <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+                                    <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+                                </div>
+
+                                {/* Overlay on Hover (Optional, kept subtle) */}
+                                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                            </div>
+
+                            {/* ACTION BUTTONS */}
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <Link href="#" className="w-full sm:w-auto">
+                                    {/* TODO: Add Restaurant Demo URL */}
+                                    <Button size="lg" className="w-full sm:w-auto px-8 min-w-[200px] shadow-lg shadow-primary/25">
+                                        Open Restaurant Demo <ExternalLink className="ml-2 w-4 h-4" />
+                                    </Button>
+                                </Link>
+                                <Link href="#" className="w-full sm:w-auto">
+                                    {/* TODO: Add Gallery URL */}
+                                    <Button variant="outline" size="lg" className="w-full sm:w-auto px-8 min-w-[200px] bg-white/5 hover:bg-white/10 border-white/10">
+                                        View Gallery <LayoutTemplate className="ml-2 w-4 h-4" />
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                     </ScrollReveal>
                 </div>
