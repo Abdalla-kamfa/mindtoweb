@@ -17,8 +17,6 @@ import {
     MessageCircle,
     CheckCircle2,
     ArrowRight,
-    CheckCircle2,
-    ArrowRight,
     Star,
     ExternalLink,
     LayoutTemplate
