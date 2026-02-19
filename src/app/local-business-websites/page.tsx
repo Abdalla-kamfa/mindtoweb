@@ -27,12 +27,7 @@ export default function LocalBusinessLandingPage() {
         <main className="min-h-screen text-white selection:bg-primary/30 relative z-10">
             <Navbar />
 
-            {/* DEBUG MARKER */}
-            <div className="fixed top-20 left-0 right-0 z-[100] pointer-events-none flex justify-center">
-                <div className="bg-red-600 text-white px-4 py-1 rounded-full text-xs font-bold shadow-xl animate-pulse">
-                    Local Business Landing Page ✅ v1
-                </div>
-            </div>
+
 
             {/* HERO SECTION */}
             <section className="relative pt-32 pb-20 overflow-hidden">
