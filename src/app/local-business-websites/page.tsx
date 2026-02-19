@@ -248,8 +248,8 @@ export default function LocalBusinessLandingPage() {
             {/* DEMO SECTION */}
             <section id="demo" className="py-20 bg-white/5 border-t border-white/5">
                 <div className="container mx-auto px-6 text-center">
-                    <ScrollReveal>
-                        <div className="max-w-5xl mx-auto">
+                    <ScrollReveal width="100%">
+                        <div className="max-w-4xl mx-auto">
                             <h2 className="text-3xl font-bold mb-4">See What's Possible</h2>
                             <p className="text-gray-400 mb-10 max-w-2xl mx-auto">
                                 Experience a fully functional website built for growth. Fast, beautiful, and ready to convert customers.
