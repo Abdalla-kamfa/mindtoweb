@@ -79,17 +79,18 @@ export default function LocalBusinessLandingPage() {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {[
-                            { icon: Utensils, label: "Restaurants & Cafes" },
-                            { icon: Stethoscope, label: "Clinics & Dentists" },
-                            { icon: Store, label: "Retail Shops" },
-                            { icon: Wrench, label: "Service Providers" }
+                            { icon: Utensils, label: "Restaurants & Cafes", desc: "Menu, WhatsApp orders, Google Maps visibility" },
+                            { icon: Stethoscope, label: "Clinics & Dentists", desc: "Appointments, trust-building, location-first SEO" },
+                            { icon: Store, label: "Retail Shops", desc: "Product highlights, promos, store directions" },
+                            { icon: Wrench, label: "Service Providers", desc: "Lead capture, calls/WhatsApp, fast landing pages" }
                         ].map((item, idx) => (
                             <ScrollReveal key={idx} delay={idx * 0.1} width="100%">
-                                <GlassCard className="p-6 flex flex-col items-center text-center justify-center gap-4 hover:border-primary/30 transition-colors h-full">
-                                    <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-primary">
+                                <GlassCard className="p-6 flex flex-col items-center text-center justify-center gap-3 hover:border-primary/30 transition-colors h-full">
+                                    <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-primary mb-1">
                                         <item.icon className="w-6 h-6" />
                                     </div>
                                     <span className="font-semibold text-gray-200">{item.label}</span>
+                                    <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
                                 </GlassCard>
                             </ScrollReveal>
                         ))}
