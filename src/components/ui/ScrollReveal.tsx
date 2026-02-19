@@ -24,7 +24,7 @@ export function ScrollReveal({ children, width = "fit-content", delay = 0, direc
             transition: {
                 duration: 0.6,
                 delay: delay,
-                ease: [0.22, 1, 0.36, 1] // Custom ease for "premium" feel
+                ease: "easeOut" // Custom ease for "premium" feel
             }
         }
     };
