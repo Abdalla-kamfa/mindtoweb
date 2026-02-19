@@ -32,41 +32,43 @@ export default function LocalBusinessLandingPage() {
 
 
             {/* HERO SECTION */}
-            <section className="relative pt-32 pb-20 overflow-hidden">
+            <section className="relative min-h-[80vh] flex items-center pt-20 pb-20 lg:pt-32 lg:pb-32 overflow-hidden">
                 {/* Background Elements */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] -z-10 opacity-30 animate-pulse-glow" />
                 <div className="absolute bottom-0 right-0 w-[600px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] -z-10 opacity-30" />
 
-                <div className="container mx-auto px-6 text-center">
+                <div className="container max-w-7xl mx-auto px-6 lg:px-8">
                     <ScrollReveal>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-sm text-primary mb-6 backdrop-blur-sm">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                            </span>
-                            Perfect for Local Businesses
-                        </div>
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-tight">
-                            Get a Website That Actually <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                Gets You Customers
-                            </span>
-                        </h1>
-                        <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            Stop losing sales to competitors. We build fast, mobile-friendly websites designed to turn visitors into bookings and calls.
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Link href="#demo">
-                                <Button size="lg" className="w-full sm:w-auto group">
-                                    View Demo
-                                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                </Button>
-                            </Link>
-                            <Link href="/dashboard/submit">
-                                <Button variant="secondary" size="lg" className="w-full sm:w-auto">
-                                    Get a Free Quote
-                                </Button>
-                            </Link>
+                        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-sm text-primary mb-6 backdrop-blur-sm">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                                </span>
+                                Perfect for Local Businesses
+                            </div>
+                            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-tight max-w-4xl">
+                                Get a Website That Actually <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                                    Gets You Customers
+                                </span>
+                            </h1>
+                            <p className="text-xl text-gray-400 mb-10 max-w-3xl leading-relaxed">
+                                Stop losing sales to competitors. We build fast, mobile-friendly websites designed to turn visitors into bookings and calls.
+                            </p>
+                            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                                <Link href="#demo" className="w-full sm:w-auto">
+                                    <Button size="lg" className="w-full group">
+                                        View Demo
+                                        <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                    </Button>
+                                </Link>
+                                <Link href="/dashboard/submit" className="w-full sm:w-auto">
+                                    <Button variant="secondary" size="lg" className="w-full">
+                                        Get a Free Quote
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                     </ScrollReveal>
                 </div>
