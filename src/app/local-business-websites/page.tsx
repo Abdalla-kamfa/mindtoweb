@@ -37,6 +37,9 @@ export default function LocalBusinessLandingPage() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] -z-10 opacity-30 animate-pulse-glow" />
                 <div className="absolute bottom-0 right-0 w-[600px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] -z-10 opacity-30" />
 
+                {/* Right-Side Decorative Orb for Desktop Balance */}
+                <div className="hidden lg:block absolute right-[10%] top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[120px] pointer-events-none opacity-40 mix-blend-screen" />
+
                 <div className="container max-w-7xl mx-auto px-6 lg:px-8">
                     <ScrollReveal>
                         <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
