@@ -197,18 +197,18 @@ export default function LocalBusinessLandingPage() {
                         {[
                             {
                                 name: "Starter",
-                                price: "$499",
+                                price: "RM 699",
                                 features: ["One Page Website", "Mobile Friendly", "Contact Form", "Hosting Included"]
                             },
                             {
                                 name: "Standard",
-                                price: "$999",
+                                price: "RM 1,499",
                                 popular: true,
                                 features: ["5 Page Website", "SEO Optimization", "Google Maps Integration", "WhatsApp Chat Button", "1 Month Support"]
                             },
                             {
                                 name: "Premium",
-                                price: "$1,999",
+                                price: "RM 2,999",
                                 features: ["10+ Pages / Custom", "Booking System", "Blog Integration", "Advanced SEO", "3 Months Support"]
                             }
                         ].map((plan, idx) => (
