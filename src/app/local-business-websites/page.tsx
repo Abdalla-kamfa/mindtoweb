@@ -110,7 +110,7 @@ export default function LocalBusinessLandingPage() {
             {/* WHAT YOU GET (FEATURES) */}
             <section className="py-24 relative">
                 <div className="container mx-auto px-6">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="grid md:grid-cols-2 gap-10 items-start">
                         <ScrollReveal direction="right">
                             <h2 className="text-3xl md:text-5xl font-bold mb-6">
                                 Everything you need to <br />
@@ -120,7 +120,7 @@ export default function LocalBusinessLandingPage() {
                                 We include all the premium features that agencies charge thousands for—standard.
                             </p>
 
-                            <div className="grid grid-cols-1 gap-4">
+                            <div className="grid grid-cols-1 gap-4 space-y-2">
                                 {[
                                     { icon: MapPin, text: "Google Maps & SEO Location" },
                                     { icon: MessageCircle, text: "WhatsApp Chat Integration" },
