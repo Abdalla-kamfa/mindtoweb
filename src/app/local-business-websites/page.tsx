@@ -92,14 +92,14 @@ export default function LocalBusinessLandingPage() {
                             { icon: Wrench, label: "Service Providers", desc: "Lead capture, calls/WhatsApp, fast landing pages" }
                         ].map((item, idx) => (
                             <ScrollReveal key={idx} delay={idx * 0.1} width="100%" className="h-full">
-                                <GlassCard className="p-8 flex flex-col items-center text-center justify-between gap-6 hover:border-primary/30 transition-colors h-full">
-                                    <div className="flex flex-col items-center gap-4 mt-2">
-                                        <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center text-primary">
-                                            <item.icon className="w-7 h-7" />
+                                <GlassCard className="p-5 md:p-8 flex flex-col items-center text-center justify-between gap-4 md:gap-6 hover:border-primary/30 transition-colors h-full">
+                                    <div className="flex flex-col items-center gap-3 mt-1 md:mt-2">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/5 flex items-center justify-center text-primary">
+                                            <item.icon className="w-6 h-6 md:w-7 md:h-7" />
                                         </div>
-                                        <span className="font-semibold text-lg text-gray-200 mt-2">{item.label}</span>
+                                        <span className="font-semibold text-lg text-gray-200 mt-3">{item.label}</span>
                                     </div>
-                                    <p className="text-sm text-gray-400 leading-relaxed mb-2">{item.desc}</p>
+                                    <p className="text-sm text-gray-400 leading-relaxed mt-2 mb-1">{item.desc}</p>
                                 </GlassCard>
                             </ScrollReveal>
                         ))}
