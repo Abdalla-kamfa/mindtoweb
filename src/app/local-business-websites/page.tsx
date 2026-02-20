@@ -167,14 +167,14 @@ export default function LocalBusinessLandingPage() {
 
             {/* HOW IT WORKS */}
             <section className="py-20 bg-white/5 border-y border-white/5">
-                <div className="container mx-auto px-6 text-center">
+                <div className="container mx-auto px-6 text-left">
                     <ScrollReveal>
-                        <h2 className="text-3xl font-bold mb-12">How It Works</h2>
+                        <h2 className="text-3xl font-bold mb-16">How It Works</h2>
                     </ScrollReveal>
 
-                    <div className="grid md:grid-cols-3 gap-8 relative">
+                    <div className="grid md:grid-cols-3 gap-8 relative max-w-5xl">
                         {/* Connecting Line (Desktop) */}
-                        <div className="hidden md:block absolute top-[2.5rem] left-[20%] right-[20%] h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
+                        <div className="hidden md:block absolute top-[2.25rem] left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
 
                         {[
                             { step: "01", title: "Send Details", desc: "Fill out a simple form with your business info." },
@@ -182,8 +182,8 @@ export default function LocalBusinessLandingPage() {
                             { step: "03", title: "Launch 🚀", desc: "We go live and you start getting customers." }
                         ].map((item, idx) => (
                             <ScrollReveal key={idx} delay={idx * 0.2}>
-                                <div className="relative z-10 flex flex-col items-center">
-                                    <div className="w-20 h-20 rounded-full bg-[#0B0E14] border border-white/20 flex items-center justify-center text-xl font-bold text-white mb-6 shadow-xl shadow-black/50">
+                                <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
+                                    <div className="w-18 h-18 rounded-full bg-[#0B0E14] border border-white/20 flex items-center justify-center text-xl font-bold text-white mb-5 shadow-lg shadow-black/30">
                                         {item.step}
                                     </div>
                                     <h3 className="text-xl font-bold mb-2">{item.title}</h3>
