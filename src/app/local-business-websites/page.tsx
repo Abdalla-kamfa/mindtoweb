@@ -339,24 +339,50 @@ export default function LocalBusinessLandingPage() {
             </section>
 
             {/* FINAL CTA */}
-            <section className="py-32 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/10 pointer-events-none" />
-                <div className="container mx-auto px-6 text-center relative z-10">
+            <section className="py-24 relative overflow-hidden">
+                <div className="absolute inset-0 bg-primary/5" />
+                <div className="container mx-auto px-6 relative text-center">
                     <ScrollReveal>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Scale Your Business?</h2>
-                        <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                            Don't let another customer slip away. Get a professional website today.
-                        </p>
-                        <Link href="/dashboard/submit">
-                            <Button size="lg" className="w-full sm:w-auto px-12 py-4 text-lg shadow-[0_0_30px_rgba(139,92,246,0.5)] animate-pulse-glow">
-                                Start Your Website Now <ArrowRight className="ml-2 w-5 h-5" />
-                            </Button>
-                        </Link>
+                        <div className="max-w-3xl mx-auto">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                                Ready to Grow Your Business?
+                            </h2>
+                            <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+                                Stop losing customers to competitors with better websites. Get a professional, high-converting site in just 3-5 days.
+                            </p>
+                            <Link href="/dashboard/submit">
+                                <Button variant="primary" className="text-lg px-10 py-6 shadow-[0_0_40px_-10px_rgba(139,92,246,0.3)] hover:shadow-[0_0_60px_-10px_rgba(139,92,246,0.4)] transition-all duration-300">
+                                    Get Your Website Now
+                                </Button>
+                            </Link>
+                            <p className="mt-6 text-sm text-gray-500">
+                                No credit card required for consultation.
+                            </p>
+                        </div>
                     </ScrollReveal>
                 </div>
             </section>
 
+            {/* FOOTER - Minimal (Custom for this landing page) */}
+            <footer className="py-12 border-t border-white/5 bg-[#0B0E14]">
+                <div className="container mx-auto px-6">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div className="flex flex-col items-center md:items-start gap-2">
+                            <Link href="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                                MindToWeb
+                            </Link>
+                            <p className="text-sm text-gray-500">
+                                &copy; {new Date().getFullYear()} MindToWeb. All rights reserved.
+                            </p>
+                        </div>
 
-        </main>
+                        <div className="flex items-center gap-8 text-sm text-gray-400">
+                            <Link href="/dashboard/submit" className="hover:text-white transition-colors">Start Project</Link>
+                            <Link href="/login" className="hover:text-white transition-colors">Client Login</Link>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     );
 }
