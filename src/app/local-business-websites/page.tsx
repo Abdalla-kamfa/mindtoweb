@@ -202,7 +202,7 @@ export default function LocalBusinessLandingPage() {
                         <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">Simple Pricing</h2>
                     </ScrollReveal>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-3 gap-8 items-stretch">
                         {[
                             {
                                 name: "Starter",
@@ -221,26 +221,26 @@ export default function LocalBusinessLandingPage() {
                                 features: ["10+ Pages / Custom", "Booking System", "Blog Integration", "Advanced SEO", "3 Months Support"]
                             }
                         ].map((plan, idx) => (
-                            <ScrollReveal key={idx} delay={idx * 0.1} width="100%" direction="up">
+                            <ScrollReveal key={idx} delay={idx * 0.1} width="100%" direction="up" className="h-full">
                                 <GlassCard className={`p-8 h-full flex flex-col relative ${plan.popular ? 'border-primary/50 shadow-[0_0_30px_-10px_rgba(139,92,246,0.3)]' : ''}`}>
                                     {plan.popular && (
-                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-1 bg-primary text-white text-xs font-bold rounded-full border border-white/20">
+                                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-white text-xs font-bold rounded-full border border-white/20 shadow-lg shadow-primary/20">
                                             Most Popular
                                         </div>
                                     )}
                                     <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
-                                    <div className="text-3xl font-bold text-white mb-6">{plan.price}</div>
+                                    <div className="text-3xl font-bold text-white mb-4">{plan.price}</div>
 
-                                    <ul className="space-y-4 mb-8 flex-1">
+                                    <ul className="space-y-3 mb-8 flex-1">
                                         {plan.features.map((f, i) => (
-                                            <li key={i} className="flex items-center gap-3 text-sm text-gray-300">
-                                                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                                                {f}
+                                            <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                                                <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                                                <span className="leading-snug">{f}</span>
                                             </li>
                                         ))}
                                     </ul>
 
-                                    <Link href="/dashboard/submit" className="w-full">
+                                    <Link href="/dashboard/submit" className="w-full mt-auto">
                                         <Button variant={plan.popular ? "primary" : "outline"} className="w-full">
                                             Get Started
                                         </Button>
