@@ -383,6 +383,6 @@ export default function LocalBusinessLandingPage() {
                     </div>
                 </div>
             </footer>
-        </div>
+        </main>
     );
 }
