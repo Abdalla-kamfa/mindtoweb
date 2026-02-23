@@ -1,7 +1,5 @@
 "use client";
 
-import { Navbar } from "@/components/layout/Navbar";
-
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -27,9 +25,6 @@ import { motion } from "framer-motion";
 export default function LocalBusinessLandingPage() {
     return (
         <main className="min-h-screen text-white selection:bg-primary/30 relative z-10">
-            <Navbar />
-
-
 
             {/* HERO SECTION */}
             <section className="relative min-h-[80vh] flex items-center pt-20 pb-20 lg:pt-32 lg:pb-32 overflow-hidden">
@@ -362,27 +357,6 @@ export default function LocalBusinessLandingPage() {
                     </ScrollReveal>
                 </div>
             </section>
-
-            {/* FOOTER - Minimal (Custom for this landing page) */}
-            <footer className="py-12 border-t border-white/5 bg-[#0B0E14]">
-                <div className="container mx-auto px-6">
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                        <div className="flex flex-col items-center md:items-start gap-2">
-                            <Link href="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                                MindToWeb
-                            </Link>
-                            <p className="text-sm text-gray-500">
-                                &copy; {new Date().getFullYear()} MindToWeb. All rights reserved.
-                            </p>
-                        </div>
-
-                        <div className="flex items-center gap-8 text-sm text-gray-400">
-                            <Link href="/dashboard/submit" className="hover:text-white transition-colors">Start Project</Link>
-                            <Link href="/login" className="hover:text-white transition-colors">Client Login</Link>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </main>
     );
 }

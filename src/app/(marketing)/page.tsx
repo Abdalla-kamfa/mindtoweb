@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { Process } from "@/components/sections/Process";
@@ -9,7 +8,6 @@ import { LocalBusinessCTA } from "@/components/sections/LocalBusinessCTA";
 export default function Home() {
   return (
     <main className="min-h-screen text-white selection:bg-primary/30 relative z-10">
-      <Navbar />
       <Hero />
 
       {/* Local Business Entry Point */}
