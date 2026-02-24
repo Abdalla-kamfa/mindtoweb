@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Sparkles, User, LayoutDashboard } from "lucide-react";
 import { clsx } from "clsx";
-import { Button } from "../ui/Button";
+import { Button } from "@/components/ui/Button";
 import { createClient } from "@/utils/supabase/client";
 import { User as SupabaseUser } from "@supabase/supabase-js";
 

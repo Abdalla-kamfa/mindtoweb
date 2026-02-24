@@ -1,13 +1,20 @@
 "use client";
 
-import { Sidebar } from "@/components/dashboard/Sidebar";
-import { motion } from "framer-motion";
+import { Sidebar } from "@/components/layout/dashboard/Sidebar";
+import { usePathname } from "next/navigation";
 
 export default function DashboardLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+    const pathname = usePathname();
+    const isAuthPage = pathname === "/login" || pathname === "/signup";
+
+    if (isAuthPage) {
+        return <>{children}</>;
+    }
+
     return (
         <div className="flex h-screen bg-[#0B0E14] overflow-hidden">
             {/* Background Elements */}

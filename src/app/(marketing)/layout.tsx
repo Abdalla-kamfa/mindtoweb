@@ -1,5 +1,7 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/marketing/Navbar";
+import { Footer } from "@/components/layout/marketing/Footer";
+import { TubesAnimation } from "@/components/ui/TubesAnimation";
+import { ChatWidget } from "@/components/layout/marketing/ChatWidget";
 
 export default function MarketingLayout({
     children,
@@ -8,9 +10,11 @@ export default function MarketingLayout({
 }>) {
     return (
         <>
+            <TubesAnimation />
             <Navbar />
             {children}
             <Footer />
+            <ChatWidget />
         </>
     );
 }
